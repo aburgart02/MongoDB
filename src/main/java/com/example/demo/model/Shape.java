@@ -43,12 +43,18 @@ public abstract class Shape {
         this.type = type;
     }
 
+    public abstract double calculateArea();
+
+    public abstract double calculatePerimeter();
+
     @Override
     public String toString() {
         return "Shape{" +
                 "id='" + id + '\'' +
                 ", color='" + color + '\'' +
                 ", type='" + type + '\'' +
+                ", area=" + String.format("%.2f", calculateArea()) +
+                ", perimeter=" + String.format("%.2f", calculatePerimeter()) +
                 '}';
     }
 }
